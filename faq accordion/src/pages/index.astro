@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Accordion from '../components/Accordion';
+---
+
+<Layout title="FAQ Accordion" description='accordion with questions of FAQ'>
+	<main class="bg-whiteMain w-[90%] max-w-lg rounded-xl p-6 md:p-8 shadow-main ">
+		<header class="flex items-center gap-4 mb-3">
+			<img class="w-8" src="icon-star.svg" alt="icon of star">
+			<h1 class="text-darkMain text-4xl font-bold">FAQs</h1>
+		</header>
+		<Accordion client:visible/>
+	</main>
+</Layout>
+
