@@ -56,7 +56,7 @@ body{
         background-position: center;
         border-radius: var(--border-r);
         @include table(){
-            background-image: linear-gradient(180deg,rgba(190, 25, 226, 0.5),rgba(189, 25, 226, 0.5)) ,url('/images/image-header-desktop.jpg');
+            background-image: linear-gradient(180deg,rgba(190, 25, 226, 0.5),rgba(190, 25, 226, 0.5)) ,url('/images/image-header-desktop.jpg');
             height: auto;
             --border-r: 0 8px 8px 0;
         }
@@ -72,7 +72,7 @@ body{
         border-radius: var(--border-r);
         @include table(){
             text-align: left;
-            padding: 3rem;
+            padding: 4rem;
             --border-r:8px 0 0 8px ;
         }
     }
@@ -97,20 +97,20 @@ body{
     @include table(){
         flex-direction: row;
         gap: 2rem;
-        margin-top: 2rem;
+        margin-top: 3rem;
 
     }
     &__number{
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         margin-bottom: .25rem;
     }
     &__text{
         color: var(--color-text);
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-size: .875rem;
+        font-size: .75rem;
         font-family: var(--ff-secundary);
         font-weight: 400;
     }
