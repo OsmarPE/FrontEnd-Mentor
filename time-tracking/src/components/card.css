@@ -1,0 +1,88 @@
+.card{
+    height: 160px;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: 90% -18%;
+    background-repeat: no-repeat;
+}
+.card__body{
+    cursor: pointer;
+    color: white;
+    height: max-content;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: var(--color-blue-300);
+    transition: background-color 0.4s ease-in-out;
+}
+
+.card__body:hover{
+    background-color: var(--color-blue-200);
+}
+
+.work{
+    background-color: var(--color-work);
+    background-image: url('../assets/images/icon-work.svg') ;
+}
+
+.social{
+    background-color: var(--color-social);
+    background-image: url('../assets/images/icon-social.svg') ;
+}
+.play{
+    background-color: var(--color-play);
+    background-image: url('../assets/images/icon-play.svg') ;
+    
+}
+.study{
+    background-color: var(--color-study);
+    background-image: url('../assets/images/icon-study.svg') ;
+}
+.exercise{
+    background-color: var(--color-exercise);
+    background-image: url('../assets/images/icon-exercise.svg') ;
+}
+.self{
+    background-color: var(--color-self);
+    background-image: url('../assets/images/icon-self-care.svg') ;
+}
+
+.card__heading{
+    margin-bottom: 1rem;
+}
+.card__footer,.card__heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.card__title{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.card__time{
+    font-size: 2.25rem;
+    font-weight: 300;
+}
+
+.card__text{
+    color: var(--color-blue-100);
+    font-size: .875rem;
+    font-weight: 300;
+}
+
+@media screen and (width >= 768px) {
+    .card{
+        height: 190px;
+    }
+    .card__footer{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+    }
+    .card__heading{
+        margin-bottom: 1.5rem;
+    }
+}

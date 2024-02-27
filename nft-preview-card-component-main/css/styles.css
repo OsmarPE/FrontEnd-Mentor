@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: "";
+  --color-Soft: hsl(215, 51%, 70%);
+  --color-Cyan: hsl(178, 100%, 50%);
+  --color-blue-300: hsl(217, 54%, 11%);
+  --color-blue-200: hsl(216, 50%, 16%);
+  --color-blue-100: hsl(215, 32%, 27%);
+  --color-White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-blue-300);
+  color: white;
+}
+
+button {
+  display: block;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  display: block;
+}
+
+.card {
+  width: 90%;
+  padding: 1.25rem;
+  border-radius: 10px;
+  color: var(--color-Soft);
+  background-color: var(--color-blue-200);
+  max-width: 300px;
+}
+.card__figure {
+  cursor: pointer;
+  position: relative;
+}
+.card__figure:hover .view {
+  opacity: 1;
+}
+.card__figure, .card__image {
+  width: 100%;
+}
+.card__image {
+  border-radius: 10px;
+}
+.card__body {
+  padding: 1.5rem 0;
+}
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-White);
+}
+.card__copy {
+  margin: 0.875rem 0;
+  line-height: 1.5;
+}
+.card__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__points, .card__time {
+  display: inline-flex;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  align-items: center;
+}
+.card__points {
+  color: var(--color-Cyan);
+}
+.card__footer {
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--color-Soft);
+}
+.card__circle {
+  width: 2.25rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.card__perfil {
+  width: 100%;
+  height: 100%;
+}
+.card__name {
+  font-size: 0.875rem;
+}
+.card__name span {
+  color: var(--color-White);
+}
+
+.view {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(178, 100%, 50%, 0.575);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+}/*# sourceMappingURL=styles.css.map */

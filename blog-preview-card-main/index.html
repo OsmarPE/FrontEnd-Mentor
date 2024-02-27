@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Blog preview card</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            white100: 'hsl(0, 0%, 100%)',
+            grey100: 'hsl(0, 0%, 50%)',
+            black100: 'hsl(0, 0%, 7%)',
+            yellow100: 'hsl(47, 88%, 63%)'
+          },
+          fontFamily:{
+            'primary':['Figtree', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen font-primary bg-yellow100 flex items-center justify-center">
+  <article class="w-[90%] max-w-[24rem] bg-white100 p-5 rounded-2xl border border-black100">
+    <figure class="w-full rounded-lg overflow-hidden">
+      <img class="w-full" src="assets/images/illustration-article.svg" alt="image of ilustration">
+    </figure>
+    <span class="block w-max py-2 px-4 rounded-md mt-6 mb-3 bg-yellow100 text-sm font-black">Learning</span>
+    <span class="text-sm block">Published 21 Dec 2023</span>
+    <a href="#" class="inline-block text-2xl my-3 font-extrabold text-balance transition-colors hover:text-yellow100">HTML & CSS foundations</a>
+    <p class="text-grey100">These languages are the backbone of every website, defining structure, content, and presentation.
+    </p>
+    <div class="flex mt-4 items-center gap-3">
+      <img class="w-8" src="assets/images/image-avatar.webp" alt="image of avatar">
+      <span class="font-extrabold text-base">Greg Hooper</span>
+    </div>
+  </article>
+
+</body>
+<style>
+    article{
+      box-shadow: 8px 8px 0px black;
+    }
+</style>
+
+</html>

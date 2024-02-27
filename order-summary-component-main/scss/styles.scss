@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --ff-primary: "Red Hat Display";
+  --color-white-100: hsl(225, 100%, 98%);
+  --color-white-200: hsl(225, 100%, 94%);
+  --color-blue-300: hsl(224, 23%, 55%);
+  --color-blue-400: hsl(245, 75%, 52%);
+  --color-blue-500: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin tablet(){
+    @media screen and (width >= 768px) {
+        @content;
+    }
+}
+
+body {
+  font-family: var(--ff-primary);
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white-200);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('/images/pattern-background-mobile.svg');
+  @include tablet(){
+      background-image: url('/images/pattern-background-desktop.svg');
+  }
+}
+
+.card {
+  width: 90%;
+  max-width: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 30px 10px hsla(245, 75%, 52%, 0.088);
+  &__figure {
+    height: 160px;
+    width: 100%;
+    background-image: url("../images/illustration-hero.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__body {
+    background-color: white;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-blue-500);
+  }
+  &__copy {
+    margin: 0.75rem 0 0;
+    line-height: 1.5;
+    color: var(--color-blue-300);
+  }
+ 
+  &__btn,
+  &__cancel {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: inherit;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.4s ease;
+  }
+  &__actions{
+    display: grid;
+    gap: .25rem;
+  }
+  &__btn {
+    background-color: var(--color-blue-400);
+    color: white;
+    box-shadow: 0 9px 30px hsla(245, 75%, 52%, 0.3);
+    &:hover{
+        opacity: .6;
+    }
+}
+  &__cancel{
+    color: var(--color-blue-300);
+    &:hover{
+        color: var(--color-blue-500);
+    }
+  }
+}
+
+.plan {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--color-white-100);
+  justify-content: space-between;
+  &,
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    color: var(--color-blue-500);
+  }
+  &__price {
+    font-weight: 500;
+    color: var(--color-blue-300);
+  }
+  &__btn {
+    font-weight: 700;
+    color: var(--color-blue-400);
+    transition: all 0.4s ease;
+    &:hover{
+        opacity: .5;
+    }
+  }
+}

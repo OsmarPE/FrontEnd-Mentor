@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --ff-primary:"Montserrat";
+  --ff-secundary:"Fraunces";
+  --color-green: hsl(158, 36%, 37%);
+  --color-Cream: hsl(30, 38%, 92%);
+  --color-black: hsl(212, 21%, 14%);
+  --color-gray: hsl(228, 12%, 48%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-Cream);
+}
+
+.main {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main__body {
+  flex: 1 1 250px;
+  padding: 1.25rem;
+}
+@media screen and (width >= 768px) {
+  .main__body {
+    padding: 1.75rem;
+  }
+}
+.main__picture {
+  flex: 1 1 250px;
+  display: block;
+  height: 220px;
+  background-image: url("../images/image-product-mobile.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+@media screen and (width >= 768px) {
+  .main__picture {
+    background-image: url("../images/image-product-desktop.jpg");
+    height: auto;
+  }
+}
+.main__subtitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--color-gray);
+}
+.main__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  font-family: var(--ff-secundary);
+  margin: 0.5rem 0 1rem;
+}
+.main__copy {
+  line-height: 1.5;
+  color: var(--color-gray);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.main__price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-green);
+  font-family: var(--ff-secundary);
+}
+.main__price--descount {
+  color: var(--color-gray);
+  font-family: var(--ff-primary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.875rem;
+}
+.main__btn {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border: 0;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+.main__btn:hover {
+  background-color: hsl(158, 47%, 17%);
+}
+.main__btn img {
+  display: inline-block;
+  margin-right: 0.25rem;
+  vertical-align: middle;
+}/*# sourceMappingURL=styles.css.map */

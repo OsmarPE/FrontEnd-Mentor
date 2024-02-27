@@ -1,0 +1,99 @@
+:root {
+  --ff-primary: "Lexend Deca";
+  --ff-secundary: "Big Shoulders Display";
+  --color-Bright: hsl(31, 77%, 52%);
+  --color-cyan-100: hsl(184, 100%, 22%);
+  --color-cyan-200: hsl(179, 100%, 13%);
+  --color-white: hsla(0, 0%, 100%, 0.75);
+  --color-gray: hsl(0, 0%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin table() {
+  @media screen and (width >= 768px) {
+    @content;
+  }
+}
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--color-white);
+}
+
+.container {
+  width: 90%;
+  max-width: 920px;
+  margin-inline: auto;
+  padding: 2rem 0;
+  @include table() {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+  }
+}
+
+.article {
+  padding: 2.5rem;
+  color: var(--color-gray);
+  &:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+  @include table() {
+    &:first-child {
+        border-radius: 10px 0 0 10px;
+      }
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+  }
+
+  &--sedans {
+    background-color: var(--color-Bright);
+  }
+  &--suvs {
+    background-color: var(--color-cyan-100);
+  }
+  &--luxury {
+    background-color: var(--color-cyan-200);
+  }
+  &__title {
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+    font-family: var(--ff-secundary);
+    font-size: 2.25rem;
+  }
+  &__copy {
+    line-height: 1.56;
+    margin-bottom: 1.25rem;
+    color: var(--color-white);
+    @include table(){
+        margin-bottom: 4rem;
+    }
+  }
+  &__btn {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: inherit;
+    background-color: white;
+    &--sedans {
+      color: var(--color-Bright);
+    }
+    &--suvs {
+      color: var(--color-cyan-100);
+    }
+    &--luxury {
+      color: var(--color-cyan-200);
+    }
+  }
+}
