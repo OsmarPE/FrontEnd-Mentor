@@ -11,6 +11,11 @@
 --color-Blue-400: hsl(229, 57%, 11%);
 
 }
+@mixin table(){
+    @media screen and (width >= 768px) {
+        @content;
+    }
+}
 body{
     font-family: "Raleway", sans-serif;   
     background-color: var(--color-Blue-400);
@@ -22,13 +27,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@mixin table(){
-    @media screen and (width >= 768px) {
-        @content;
+    @include table(){
+        background-image: url('/images/bg-desktop.png');
+        background-position: bottom;
+        background-size: contain;
     }
 }
+
 
 img{
     max-width: 100%;

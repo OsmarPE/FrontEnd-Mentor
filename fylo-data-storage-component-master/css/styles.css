@@ -24,6 +24,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (width >= 768px) {
+  body {
+    background-image: url("/images/bg-desktop.png");
+    background-position: bottom;
+    background-size: contain;
+  }
+}
 
 img {
   max-width: 100%;
